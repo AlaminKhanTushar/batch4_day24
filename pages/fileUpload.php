@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['id']))
+    {
+        header('Location: action.php?page=login');
+    }
+?>
+
 <?php include 'pages/includes/header.php';?>
     <section class="py-5">
         <div class="container">
@@ -5,12 +13,19 @@
                 <div class="col-md-8 mx-auto">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Input Student Information Carefully</h3>
+                            <h3 class="card-title text-center">Input Student Information Carefully</h3>
                         </div>
                         <div class="card-body">
-                            <?php if(isset($message)){ ?>
-                                <h6 class="text-success text-center"><?php echo $message; ?></h6>
-                            <?php } ?>
+<!--                                <h1>-->
+<!--                                    --><?php
+//                                        session_start();
+//
+//                                    ?>
+<!--                                </h1>-->
+                                <?php
+                                    if(isset($message)){ ?>
+                                    <h6 class="text-success text-center"><?php echo $message; ?></h6>
+                                <?php } ?>
                             <div>
                                 <form action="action.php" method="post" enctype="multipart/form-data">
                                     <div class="form-group row">

@@ -1,3 +1,7 @@
+<?php
+//session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,14 +19,15 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <div class="container">
-        <a href="action.php?pages=file-upload" class="navbar-brand">Logo</a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="action.php?pages=file-upload" class="nav-link">File Upload</a></li>
-            <li class="nav-item"><a href="action.php?pages=view-students" class="nav-link">View Students</a></li>
-            <li class="nav-item"><a href="action.php?pages=logout" class="nav-link">Logout</a></li>
-        </ul>
-    </div>
-</nav>
-
+<?php if (isset($_SESSION['id'])) { ?>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="action.php?pages=file-upload" class="navbar-brand">Logo</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="action.php?pages=file-upload" class="nav-link">File Upload</a></li>
+                <li class="nav-item"><a href="action.php?pages=view-students" class="nav-link">View Students</a></li>
+                <li class="nav-item"><a href="action.php?pages=logout" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+<?php } ?>

@@ -25,6 +25,8 @@ class Auth
 
         if ($this->email == $this->authEmail && $this->password == $this->authPassword)
         {
+            session_start();
+            $_SESSION['id'] = rand(10, 1000);
             header('Location: action.php?pages=file-upload');
         }else{
             return 'Sorry./... Abar try koren Vaia';
@@ -33,6 +35,8 @@ class Auth
     }
     public function logout()
     {
+        session_start();
+        unset($_SESSION['id']);
         header('Location: action.php?pages=login');
     }
 

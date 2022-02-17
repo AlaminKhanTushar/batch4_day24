@@ -8,6 +8,18 @@
                         <h3 class="card-title">Input Student Information Carefully</h3>
                     </div>
                     <div class="card-body">
+<!--                            <h1>-->
+<!--                                --><?php
+////                                session_start();
+////                                session_destroy();
+////                                echo $_SESSION['mobile'].' ';
+////                                unset($_SESSION['mobile']);
+////                                echo $_SESSION['mobile'];
+////                                echo $_SESSION['name'];
+////                                echo $_SESSION['city'];
+//
+//                                ?>
+<!--                            </h1>-->
                         <div>
                             <form action="action.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group row">
@@ -48,7 +60,4 @@
         </div>
     </div>
 </section>
-
-
-
-<?php include 'pages/includes/footer.php';?>
+<?php include 'pages/includes/footer.php'; ?>
